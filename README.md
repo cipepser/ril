@@ -248,7 +248,24 @@ The command '/bin/sh -c buffalo build -o bin/app' returned a non-zero code: 255
  ▸    Error: docker build exited with Error: 255
 ```
 
-githubにアップロードできてない。
+githubにアップロードできてないのでアップロードして再度実行する。
+
+同じエラーだった。
+
+`buffalo dev`はできるようになっている。
+
+`database.yml`の`production`を以下のようにした。
+
+```yaml
+production:
+  dialect: postgres
+  database: ril_production
+  user: postgres
+  password: postgres
+  host: 127.0.0.1
+  pool: 5
+  url: {{envOr "DATABASE_URL" "postgres://postgres:postgres@127.0.0.1:5432/ril_production?sslmode=disable"}}
+```
 
 ## References
 - [Deploying Buffalo to Heroku With Docker – Buffalo — Rapid Web Development in Go](https://blog.gobuffalo.io/deploying-buffalo-to-heroku-with-docker-adafa4afdd6f)
