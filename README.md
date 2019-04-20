@@ -6,15 +6,15 @@ github上にレポジトリを作成しておく。
 
 Herokuのダッシュボードから`New`を押下し、新しいアプリを作成する。
 
-![01](https://github.com/cipepser/lifegame/blob/master/img/01.png)
+![01](https://github.com/cipepser/ril/blob/master/img/01.png)
 
 App Nameを決める。
 
-![02](https://github.com/cipepser/lifegame/blob/master/img/02.png)
+![02](https://github.com/cipepser/ril/blob/master/img/02.png)
 
 GitHubで事前に作成したレポジトリとConnectする。
 
-![03](https://github.com/cipepser/lifegame/blob/master/img/03.png)
+![03](https://github.com/cipepser/ril/blob/master/img/03.png)
 
 ## Buffaloのプロジェクトを作成する
 
