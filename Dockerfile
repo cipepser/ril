@@ -8,4 +8,4 @@ ADD . .
 RUN npm install
 RUN buffalo build -o bin/app
 
-CMD exec /bin/app
+CMD exec bin/app

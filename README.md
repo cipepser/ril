@@ -267,6 +267,27 @@ production:
   url: {{envOr "DATABASE_URL" "postgres://postgres:postgres@127.0.0.1:5432/ril_production?sslmode=disable"}}
 ```
 
+これでも同じエラー。
+
+githubの`ril`レポジトリをprivateにしていたのでpublicにして再度。
+先に進めて以下まで出た。
+
+```sh
+Your image has been successfully pushed. You can now release it with the 'container:release' command.
+```
+
+リリースする。
+
+```sh
+❯ heroku container:release web -a reminditlater
+Releasing images web to reminditlater... done
+```
+
+`CMD exec /bin/app`になってる。
+`CMD exec bin/app`に修正して`push`と`release`をもう一度。
+
+これでbuffaloのトップ画面までは出るようになった。
+
 ## References
 - [Deploying Buffalo to Heroku With Docker – Buffalo — Rapid Web Development in Go](https://blog.gobuffalo.io/deploying-buffalo-to-heroku-with-docker-adafa4afdd6f)
 - [Install Buffalo · Buffalo – Rapid Web Development in Go](https://gobuffalo.io/en/docs/getting-started/installation)
