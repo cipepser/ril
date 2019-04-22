@@ -288,6 +288,24 @@ Releasing images web to reminditlater... done
 
 これでbuffaloのトップ画面までは出るようになった。
 
+## ローカルでbuffaloの開発
+
+```sh
+❯ docker run --name ril_development -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+```
+
+```yaml
+development:
+  dialect: postgres
+  database: postgres
+  user: postgres
+  password: postgres
+  host: 127.0.0.1
+  pool: 5
+```
+
+
+
 ## References
 - [Deploying Buffalo to Heroku With Docker – Buffalo — Rapid Web Development in Go](https://blog.gobuffalo.io/deploying-buffalo-to-heroku-with-docker-adafa4afdd6f)
 - [Install Buffalo · Buffalo – Rapid Web Development in Go](https://gobuffalo.io/en/docs/getting-started/installation)
